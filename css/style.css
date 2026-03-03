@@ -1,0 +1,127 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Batang&display=swap');
+
+.body {font-family:"Do Hyeon", "Gowun Batang", sans-serif; color: #333;}
+
+/* 헤더  width:95%를 줌에 따라 사이즈 변경시 왼쪽에 여백이 생김, 그전엔 딱 붙어 있음*/
+.header {max-width: 1180px; margin: 0 auto; height: 120px; width: 95%;}
+.gnb {display: flex; font-size: 13px; justify-content: flex-end;
+ height: 50px; align-items: center; color: #666; margin-right: 50px;}
+.gnb>li {margin-right: 20px;}
+.gnb>li:hover a {color: #48363A; text-decoration: underline;}
+.wrap {display: flex; justify-content: space-between; height: 70px;
+ align-items: flex-end;}
+.logo {height: 70px;}
+.logo>a {display: block;}
+.logo>a>img {height: 70px;}
+.f_logo {line-height: 70px; font-size: 24px; font-weight: 900;}
+.menu {display: flex;}
+.menu>li {text-align: center; font-size: 15px;}
+.menu>li>a {display: block; padding: 15px 40px; background-color: transparent;}
+.menu>li:hover>a {background-color: #FFC0CB; color: #003366;
+ transition: all 0.4s ease, color 0.4s ease;}
+
+/* 메인 - 비디오 - 비디오 효과, 화면 어둡게 한 내용 기억*/
+.main {width: 100%; height: calc(100vh - 120px); position: relative;
+ background-color: black;}
+.main>video {width: 100%; height: 100%; display: block; object-fit: cover;
+ opacity: 0.3; filter: blur(2px); transition: filter 0.5s ease;}
+
+/* 메인 - 타이틀 : 로고와 라인을 맞추기 위해 크기 및 정렬 작업*/
+.main_title {height: 275px; max-width: 1180px; position: absolute; top: 25%;
+ left: 0; right: 0; margin: auto; width: 95%;}
+.main_title>h1 {font-size: 110px; color: #fff; font-weight: 500; letter-spacing: -5px;}
+.main_title>h3 {color: #fff; margin-bottom: 10px;}
+.main_title>p {margin-bottom: 10px; color: #d2d2d2b9; font-size: 14px;}
+.main_title>a {display: block; width: 400px; height: 30px; font-size: 12px;
+ border: 1px solid #fff; color: #fff; text-align: center; line-height: 30px; margin-top: 20px;
+ transition: all 0.4s ease, color 0.4s ease;}
+.main_title>a:hover {background-color: #fff; color: #999;}
+
+/* 갤러리 홍보 */
+.gallery {max-width: 1180px; margin: 0 auto; width: 95%;
+ margin-top: 100px;  padding-top: 100px;}
+.gallery>h2 {text-align: center; margin-bottom: 30px;}
+.media {width: 80%; margin: 0 auto; display: flex; justify-content: space-between;}
+.media>li {width: 22%;}
+.media>li>a {display: block; text-align: center;}
+.media>li>a img {width: 100%; height: 180px; border-radius: 20px;}
+.media>li>a h4 {margin: 15px 0;}
+.media>li>a p {font-size: 12px;}
+
+/* 컨텐츠 */
+.contents {max-width: 1180px; margin: 0 auto; width: 95%;
+ border-top: 1px solid #ddd;  margin-top: 100px;  padding-top: 100px;
+ margin-bottom: 200px;}
+.contents>h2 {text-align: center; margin-bottom: 30px;}
+.news {width: 80%; margin: 0 auto; display: flex; justify-content: space-between;}
+.news>li {width: 22%;}
+.news>li>a {display: block; text-align: center;}
+.news>li>a img {width: 100%; height: 180px; }
+.news>li>a h4 {margin: 15px 0;}
+.news>li>a p {font-size: 12px;}
+
+/* footer */
+.footer {background-color: #556B2F; color: #fff; padding: 100px 0;}
+.f_wrap {max-width: 1180px; margin: 0 auto; width: 95%;}
+.f_top {display: flex; justify-content: space-between; align-items: center;
+ border-bottom: 1px solid #fff;}
+.f_logo {display: flex; align-items: flex-end;} 
+.f_logo>p {font-size: 10px; margin-left: 20px;}
+.f_gnb {display: flex; font-size: 14px; justify-content: space-between;
+ align-items: center; }
+.f_gnb>li {margin-left: 20px; font-weight: 600;}
+.address {font-size: 14px; margin-top: 20px;}
+.copy {font-size: 12px;}
+
+/* 미디어 커리 : 항상 아래에 위치해야 함*/
+@media all and (max-width:1024px) {
+ .header {height: 70px; width: 100%; padding: 0 2.5%;
+  background-color: rgba(255, 255, 255, 0.8); position: fixed; z-index: 10;}
+ .gnb, .menu {display: none;}
+/* max-width : 큰 수 부터 적용*/
+
+
+ /* 반응형 _ m 메뉴*/
+ .m_btn {width: 70px; height: 70px; display: flex; flex-direction: column; 
+  justify-content: center; align-items: center; background: none;
+  margin-right: 10px;}
+ .m_btn>span {width:30px; border-top: 2px solid #333; margin: 4px 0;}
+ .m_nav{position: absolute; top: 70px; background-color: #33333394;
+  width: 100%; left: 0; color: #d2d2d2; font-size: 14px;}
+ .m_menu>li>a {display: block; line-height: 40px; text-align: center;}
+ .m_gnb {display: flex; flex-wrap: wrap; justify-content: space-evenly;
+  border-bottom: 1px solid #d2d2d2;}
+ .m_gnb>li>a {display: block; line-height: 40px; padding: 0 10px;}
+
+ .main {height: calc(100vh - 70px); top: 70px;}
+ .main_title {text-align: center;}
+ .main_title>h1 {font-size: 10vw;}
+ .main_title>a {margin-left:auto; margin-right: auto;}
+ .main_title>p {text-align: center; margin-bottom: 10px;}
+
+ .media {flex-wrap: wrap; justify-content: space-evenly;}
+ .media>li {width: 45%; margin-bottom: 30px;}
+ .media>li>a img {width: 80%;}
+
+ .news {flex-wrap: wrap; justify-content: space-evenly;}
+ .news>li {width: 35%; margin-bottom: 30px;}
+ .news>li>a img {width: 80%;}
+}
+
+@media all and (max-width:560px) {
+ .contents {margin: 150px auto;}
+ .news>li {width: 90%; margin-bottom: 30px; position: relative;}
+ .news>li>a>img {height: 220px;}
+ .news>li .c_wrap {width: 61%; position: absolute; top: 20%; left: 10%;
+  background-color: #ffffff88; border-radius: 10px; padding: 10px 20px;}
+ .news>li>a h4 {margin: 5px 0;}
+ .footer {padding: 50px 0;}
+ .f_top {flex-direction: column; padding-bottom: 20px;} 
+ .address {text-align: center;}
+ .copy {text-align: center;}
+}
+
+@media all and (min-width:1025px) {
+ .mobile {display: none;}
+}
